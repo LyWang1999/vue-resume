@@ -1,0 +1,49 @@
+{
+  "name": "vue-resume",
+  "author": "kuluo <1664269235@qq.com>",
+  "version": "0.1.0",
+  "private": true,
+  "description": "custom resume website designed by open source project - vue-element-admin",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanJiaChen/vue-element-admin.git"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.4.4",
+    "element-ui": "2.13.1",
+    "js-cookie": "^2.2.1",
+    "qs": "^6.9.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-vuex": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "svg-sprite-loader": "^5.0.0",
+    "svgo": "^1.3.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=10.16.0",
+    "npm": ">= 6.10.0"
+  }
+}
