@@ -1,7 +1,7 @@
 <template>
   <el-card style="margin-bottom:20px;">
     <div slot="header" class="clearfix">
-      <span>About me</span>
+      <span>关于我</span>
     </div>
 
     <div class="user-profile">
@@ -13,8 +13,12 @@
           </div>
         </pan-thumb>
       </div>
+
       <div class="box-center">
-        <div class="user-name text-center">{{ user.name }}</div>
+        <div class="user-name text-center">
+          <svg-icon icon-class="male" />
+          {{ user.name }}
+        </div>
         <div class="user-role text-center text-muted">{{ user.role }}</div>
       </div>
     </div>
@@ -24,31 +28,60 @@
         <div class="user-bio-section-header"><svg-icon icon-class="education" /><span>教育经历</span></div>
         <div class="user-bio-section-body">
           <div class="text-muted">
-            浙江工业大学 - 计算机学院
-            <br />
-            软件工程专业
+            美国俄勒冈大学 - 计算机学院 - 软件工程（雾）
           </div>
         </div>
       </div>
 
       <div class="user-skills user-bio-section">
-        <div class="user-bio-section-header"><svg-icon icon-class="skill" /><span>技能</span></div>
+        <div class="user-bio-section-header"><svg-icon icon-class="message" /><span>联系方式</span></div>
         <div class="user-bio-section-body">
-          <div class="progress-item">
-            <span>Vue</span>
-            <el-progress :percentage="70" />
+          <div class="text-muted">
+            <strong>手机：</strong>23333333333
           </div>
-          <div class="progress-item">
-            <span>JavaScript</span>
-            <el-progress :percentage="18" />
+          <div class="text-muted">
+            <strong>Email：</strong>23333333333@gmail.com
           </div>
-          <div class="progress-item">
-            <span>Css</span>
-            <el-progress :percentage="12" />
+          <div class="text-muted">
+            <strong>QQ：</strong>2333333333
           </div>
-          <div class="progress-item">
-            <span>ESLint</span>
-            <el-progress :percentage="100" status="success" />
+        </div>
+      </div>
+
+      <div class="user-experience user-bio-section">
+        <div class="user-bio-section-header"><svg-icon icon-class="guide" /><span>应聘职位</span></div>
+        <div class="user-bio-section-body">
+          <div class="text-muted">
+            <strong>期望职位：</strong>爪哇后端攻城狮
+          </div>
+          <div class="text-muted">
+            <strong>期望城市：</strong>M18星云
+          </div>
+        </div>
+      </div>
+
+      <div class="user-extern-link user-bio-section">
+        <div class="user-bio-section-header"><svg-icon icon-class="link" /><span>仓库和博客</span></div>
+        <div class="user-bio-section-body">
+          <div class="text-muted">
+            <strong>GitHub：</strong>
+            <a
+              style="color: cornflowerblue"
+              href="https://github.com/kuluoluohaoxiuyi"
+              target="_blank"
+            >
+              https://github.com/kuluoluohaoxiuyi
+            </a>
+          </div>
+          <div class="text-muted">
+            <strong>博客园：</strong>
+            <a
+              style="color: cornflowerblue"
+              href="https://www.cnblogs.com/kuluo/"
+              target="_blank"
+            >
+              https://www.cnblogs.com/kuluo/
+            </a>
           </div>
         </div>
       </div>
@@ -85,6 +118,7 @@ export default {
 
  .text-muted {
    color: #777;
+   margin-bottom: 5px;
  }
 
  .user-profile {
