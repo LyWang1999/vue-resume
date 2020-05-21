@@ -5,8 +5,6 @@ import routes from './router'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  // 默认为 hash
-  mode: 'history',
   routes
 })
 

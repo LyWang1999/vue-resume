@@ -1,4 +1,4 @@
-# vue-segment
+# vue-resume
 
 ## Project setup
 ```
