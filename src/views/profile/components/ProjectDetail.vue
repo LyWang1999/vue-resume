@@ -1,10 +1,10 @@
 <template>
-  <div class="self-capability">
+  <div class="project-detail">
     <div class="post">
-      <div class="capability-block">
-        <span class="capability-name text-muted">***项目</span>
+      <div class="detail-block">
+        <span class="detail-name text-muted">***项目</span>
       </div>
-      <ul class="list-capability">
+      <ul class="list-detail">
         <li>
           我干了啥
         </li>
@@ -27,10 +27,10 @@
     </div>
 
     <div class="post">
-      <div class="capability-block">
-        <span class="capability-name text-muted">***项目</span>
+      <div class="detail-block">
+        <span class="detail-name text-muted">***项目</span>
       </div>
-      <ul class="list-capability">
+      <ul class="list-detail">
         <li>
           我干了啥
         </li>
@@ -63,9 +63,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .self-capability {
-    .capability-block {
-      .capability-name{
+  .project-detail {
+    .detail-block {
+      .detail-name{
         display: block;
         padding: 2px 0;
         font-size: 20px;
@@ -102,7 +102,7 @@ export default {
 
       }
 
-      .list-capability {
+      .list-detail {
         padding-left: 20px;
 
         li {
@@ -110,7 +110,7 @@ export default {
         }
       }
 
-      .capability-images {
+      .detail-images {
         padding-top: 20px;
       }
     }
