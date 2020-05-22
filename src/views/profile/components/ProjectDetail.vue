@@ -51,6 +51,26 @@
         </li>
       </ul>
     </div>
+
+    <div class="post">
+      <div class="detail-block">
+        <span class="detail-name text-muted">项目成果展示</span>
+      </div>
+      <div class="detail-images">
+        <el-image
+          class="image"
+          fit="cover"
+          v-for="(item, key) in srcList"
+          :key="key"
+          :src="item"
+          :preview-src-list="srcList"
+        >
+          <div slot="placeholder">
+            加载中...
+          </div>
+        </el-image>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,6 +78,12 @@
 
 export default {
   data () {
+    return {
+      srcList: [
+        'https://s1.ax1x.com/2020/05/22/YL2utS.png',
+        'https://s1.ax1x.com/2020/05/22/YL2utS.png'
+      ]
+    }
   }
 }
 </script>
@@ -97,9 +123,9 @@ export default {
       color: #666;
 
       .image {
-        width: 100%;
-        height: 100%;
-
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
       }
 
       .list-detail {
