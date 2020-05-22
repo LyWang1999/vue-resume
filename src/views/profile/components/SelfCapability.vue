@@ -5,23 +5,8 @@
         <span class="capability-name text-muted">技能清单</span>
       </div>
       <ul class="list-capability">
-        <li>
-          WEB框架：SpringBoot / SpringMVC / MyBatis / Dubbo / Netty
-        </li>
-        <li>
-          大数据框架：Spark / Flume / Kafka / ZooKeeper
-        </li>
-        <li>
-          前端框架：Bootstrap / Vue / Nodejs
-        </li>
-        <li>
-          前端工具：Sass / Less / ES2015
-        </li>
-        <li>
-          数据库相关：MySQL / HBase / Redis
-        </li>
-        <li>
-          版本管理和自动化部署工具：Git / Maven
+        <li v-for="(item, key) in userCapability.skills" :key="key">
+          {{ item }}
         </li>
       </ul>
     </div>
@@ -31,22 +16,13 @@
         <span class="capability-name text-muted">开源项目</span>
       </div>
       <ul class="list-capability">
-        <li>
+        <li v-for="(item, key) in userCapability.repos" :key="key">
           <a
             style="color: cornflowerblue"
-            href="https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Springboot"
+            :href="item"
             target="_blank"
           >
-            https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Springboot
-          </a>
-        </li>
-        <li>
-          <a
-            style="color: cornflowerblue"
-            href="https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Vue"
-            target="_blank"
-          >
-            https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Vue
+            {{ item }}
           </a>
         </li>
       </ul>
@@ -57,22 +33,13 @@
         <span class="capability-name text-muted">技术文章</span>
       </div>
       <ul class="list-capability">
-        <li>
+        <li v-for="(item, key) in userCapability.articles" :key="key">
           <a
             style="color: cornflowerblue"
-            href="https://www.cnblogs.com/kuluo/p/12586627.html"
+            :href="item.articleLink"
             target="_blank"
           >
-            实时流处理的单节点伪分布式环境搭建
-          </a>
-        </li>
-        <li>
-          <a
-            style="color: cornflowerblue"
-            href="https://www.cnblogs.com/kuluo/p/12722255.html"
-            target="_blank"
-          >
-            Netty + Spring + ZooKeeper搭建轻量级RPC框架
+            {{ item.articleTile }}
           </a>
         </li>
       </ul>
@@ -83,11 +50,8 @@
         <span class="capability-name text-muted">项目经历</span>
       </div>
       <ul class="list-capability">
-        <li>
-          参与Apache顶级项目
-        </li>
-        <li>
-          参与WEB通信协议制订
+        <li v-for="(item, key) in userCapability.experience" :key="key">
+          {{ item }}
         </li>
       </ul>
     </div>
@@ -97,11 +61,8 @@
         <span class="capability-name text-muted">在校任职</span>
       </div>
       <ul class="list-capability">
-        <li>
-          担任学生会主席
-        </li>
-        <li>
-          学校服务器维护
+        <li v-for="(item, key) in userCapability.stuJobs" :key="key">
+          {{ item }}
         </li>
       </ul>
     </div>
@@ -129,8 +90,7 @@
 // const carouselPrefix = '?imageView2/2/h/440'
 
 export default {
-  data () {
-    // return {
+  props: {
     //   carouselImages: [
     //     'https://wpimg.wallstcn.com/9679ffb0-9e0b-4451-9916-e21992218054.jpg',
     //     'https://wpimg.wallstcn.com/bcce3734-0837-4b9f-9261-351ef384f75a.jpg',
@@ -139,7 +99,10 @@ export default {
     //   ],
     //   avatarPrefix,
     //   carouselPrefix
-    // }
+    userCapability: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>

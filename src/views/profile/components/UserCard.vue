@@ -28,7 +28,7 @@
         <div class="user-bio-section-header"><svg-icon icon-class="education" /><span>教育经历</span></div>
         <div class="user-bio-section-body">
           <div class="text-muted">
-            美国俄勒冈大学 - 计算机学院 - 软件工程（雾）
+            {{ user.education }}
           </div>
         </div>
       </div>
@@ -37,13 +37,13 @@
         <div class="user-bio-section-header"><svg-icon icon-class="message" /><span>联系方式</span></div>
         <div class="user-bio-section-body">
           <div class="text-muted">
-            <strong>手机：</strong>23333333333
+            <strong>手机：</strong>{{ user.phone }}
           </div>
           <div class="text-muted">
-            <strong>Email：</strong>23333333333@gmail.com
+            <strong>Email：</strong>{{ user.email }}
           </div>
           <div class="text-muted">
-            <strong>QQ：</strong>2333333333
+            <strong>QQ：</strong>{{ user.qq }}
           </div>
         </div>
       </div>
@@ -52,10 +52,10 @@
         <div class="user-bio-section-header"><svg-icon icon-class="guide" /><span>应聘职位</span></div>
         <div class="user-bio-section-body">
           <div class="text-muted">
-            <strong>期望职位：</strong>爪哇后端攻城狮
+            <strong>期望职位：</strong>{{ user.expectedJob }}
           </div>
           <div class="text-muted">
-            <strong>期望城市：</strong>M18星云
+            <strong>期望城市：</strong>{{ user.expectedCity }}
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
               href="https://github.com/kuluoluohaoxiuyi"
               target="_blank"
             >
-              https://github.com/kuluoluohaoxiuyi
+              {{ user.giHubLink }}
             </a>
           </div>
           <div class="text-muted">
@@ -80,7 +80,7 @@
               href="https://www.cnblogs.com/kuluo/"
               target="_blank"
             >
-              https://www.cnblogs.com/kuluo/
+              {{ user.blogLink }}
             </a>
           </div>
         </div>
@@ -97,14 +97,7 @@ export default {
   props: {
     user: {
       type: Object,
-      default: () => {
-        return {
-          name: '',
-          email: '',
-          avatar: '',
-          roles: ''
-        }
-      }
+      required: true
     }
   }
 }

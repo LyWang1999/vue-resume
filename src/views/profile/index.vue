@@ -16,10 +16,15 @@
           <el-card>
             <el-tabs v-model="activeTab">
               <el-tab-pane label="个人能力" name="SelfCapability">
-                <self-capability />
+                <self-capability
+                  :user-capability="userCapability"
+                />
               </el-tab-pane>
               <el-tab-pane label="项目详情" name="project-detail">
-                <project-detail />
+                <project-detail
+                  :images="projectDetail.images"
+                  :projects="projectDetail.projects"
+                />
               </el-tab-pane>
             </el-tabs>
           </el-card>
@@ -40,11 +45,77 @@ export default {
   components: { UserCard, SelfCapability, ProjectDetail },
   data () {
     return {
+      // 关于我
       user: {
         name: '吴彦祖',
         role: '高材生',
-        email: '*********@gmail.com',
+        education: '美国俄勒冈大学 - 计算机学院 - 软件工程（雾）',
+        phone: '23333333333',
+        email: '23333333333@gmail.com',
+        qq: '2333333333',
+        expectedJob: '爪哇后端攻城狮',
+        expectedCity: 'M18星云',
+        giHubLink: 'https://github.com/kuluoluohaoxiuyi',
+        blogLink: 'https://www.cnblogs.com/kuluo/',
         avatar: 'https://s1.ax1x.com/2020/05/20/YouGF0.png'
+      },
+      // 个人能力
+      userCapability: {
+        skills: [
+          'WEB框架：SpringBoot / SpringMVC / MyBatis / Dubbo / Netty',
+          '大数据框架：Spark / Flume / Kafka / ZooKeeper',
+          '前端框架：Bootstrap / Vue / Nodejs',
+          '前端工具：Sass / Less / ES2015',
+          '数据库相关：MySQL / HBase / Redis',
+          '版本管理和自动化部署工具：Git / Maven'
+        ],
+        repos: [
+          'https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Springboot',
+          'https://github.com/kuluoluohaoxiuyi/Hotel-Management-System-Vue'
+        ],
+        articles: [
+          {
+            articleTile: '实时流处理的单节点伪分布式环境搭建',
+            articleLink: 'https://www.cnblogs.com/kuluo/p/12586627.html'
+          },
+          {
+            articleTile: 'Netty + Spring + ZooKeeper搭建轻量级RPC框架',
+            articleLink: 'https://www.cnblogs.com/kuluo/p/12722255.html'
+          }
+        ],
+        experience: [
+          '参与Apache顶级项目',
+          '参与WEB通信协议制订'
+        ],
+        stuJobs: [
+          '担任学生会主席',
+          '学校服务器维护'
+        ]
+      },
+      // 项目详情
+      projectDetail: {
+        images: [
+          'https://s1.ax1x.com/2020/05/22/YL2utS.png',
+          'https://s1.ax1x.com/2020/05/22/YL2utS.png'
+        ],
+        projects: [
+          {
+            projectName: '***项目',
+            myJobs: [
+              '我干了啥',
+              '我干了啥',
+              '我干了啥'
+            ]
+          },
+          {
+            projectName: '***项目',
+            myJobs: [
+              '我干了啥',
+              '我干了啥',
+              '我干了啥'
+            ]
+          }
+        ]
       },
       activeTab: 'SelfCapability'
     }

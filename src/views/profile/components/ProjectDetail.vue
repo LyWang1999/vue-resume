@@ -1,53 +1,12 @@
 <template>
   <div class="project-detail">
-    <div class="post">
+    <div class="post" v-for="(project, key1) in projects" :key="key1">
       <div class="detail-block">
-        <span class="detail-name text-muted">***项目</span>
+        <span class="detail-name text-muted">{{ project.projectName }}</span>
       </div>
       <ul class="list-detail">
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-      </ul>
-    </div>
-
-    <div class="post">
-      <div class="detail-block">
-        <span class="detail-name text-muted">***项目</span>
-      </div>
-      <ul class="list-detail">
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
-        </li>
-        <li>
-          我干了啥
+        <li v-for="(job, key2) in project.myJobs" :key="key2">
+          {{ job }}
         </li>
       </ul>
     </div>
@@ -60,10 +19,10 @@
         <el-image
           class="image"
           fit="cover"
-          v-for="(item, key) in srcList"
+          v-for="(item, key) in images"
           :key="key"
           :src="item"
-          :preview-src-list="srcList"
+          :preview-src-list="images"
         >
           <div slot="placeholder">
             加载中...
@@ -77,12 +36,14 @@
 <script>
 
 export default {
-  data () {
-    return {
-      srcList: [
-        'https://s1.ax1x.com/2020/05/22/YL2utS.png',
-        'https://s1.ax1x.com/2020/05/22/YL2utS.png'
-      ]
+  props: {
+    images: {
+      type: Array,
+      required: true
+    },
+    projects: {
+      type: Array,
+      required: true
     }
   }
 }
