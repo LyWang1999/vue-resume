@@ -94,6 +94,20 @@
 
     <div class="post">
       <div class="capability-block">
+        <span class="capability-name text-muted">在校任职</span>
+      </div>
+      <ul class="list-capability">
+        <li>
+          担任学生会主席
+        </li>
+        <li>
+          学校服务器维护
+        </li>
+      </ul>
+    </div>
+
+    <div class="post">
+      <div class="capability-block">
         <span class="capability-name">获奖证书</span>
       </div>
       <div class="capability-images">
